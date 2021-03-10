@@ -22,10 +22,6 @@ function Details() {
         setItemDetails(
           response.data.data.partner_api_response.item_api_response_list
         );
-        console.log(
-          response.data.data.partner_api_response.item_api_response_list
-        );
-        console.log(response.data.data.partner_api_response);
         setIntroduce(response.data.data.partner_api_response);
       })
       .catch((error) => {
@@ -60,7 +56,10 @@ function Details() {
             {itemDetails.map((data) => (
               <li key={data.id}>
                 <a href={"#" + data.id}>
-                  <img src={data.image} alt={data.title} className="shadow" />
+                  <div
+                    className="thumnail shadow"
+                    style={{ backgroundImage: `url(${data.image})` }}
+                  ></div>
                   <p className="pdt_name">{data.title}</p>
                   <p className="pdt_price">{formatCurrency(data.price)}</p>
                   <button

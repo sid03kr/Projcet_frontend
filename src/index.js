@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { CartProvider } from "react-use-cart";
+import { BrowserRouter as Router } from 'react-router-dom';
 
 ReactDOM.render(
   <CartProvider>
+    <Router>
     <App />
+    </Router>
   </CartProvider>,
   document.getElementById('root')
 );

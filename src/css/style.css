@@ -39,6 +39,13 @@ article > .content > ul.best_item > li {
   margin: 5px 5px 50px;
   float: left;
 }
+article > .content > ul.best_item > li .thumnail {
+  width: 100%;
+  padding-bottom: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 article > .content > ul.best_item > li .img {
   width: 100%;
@@ -56,8 +63,10 @@ article > .content > ul.best_item > li h4 {
   margin-bottom: 5px;
 }
 article > .content > ul.best_item > li p.pdt_name {
-  color: #777;
+  color: #333;
   font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
 }
 article > .content > ul.best_item > li p.pdt_price {
   color: #a8a8a8;
@@ -160,4 +169,51 @@ article .table li > div.td > div.date {
   background-color: #f5f5f5;
   min-height: 200px;
   padding: 5px;
+}
+
+/* detail */
+aside > ul.cart_list {
+  margin-top: 10px;
+}
+aside > ul.cart_list li {
+  padding: 5px 0;
+  line-height: 22px;
+  vertical-align: top;
+}
+aside > ul.cart_list li + li {
+  border-top: 1px solid #ccc;
+}
+aside > ul.cart_list .thumb {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+aside > ul.cart_list .tit {
+  width: 110px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  overflow: hidden;
+  height: 22px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+aside > ul.cart_list .btn_cnt,
+aside > ul.cart_list .cnt {
+  background: #fff;
+  border: 1px solid #ccc;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+aside > ul.cart_list .btn_del {
+  float: right;
+  font-size: 18px;
 }

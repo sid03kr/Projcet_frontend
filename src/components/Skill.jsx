@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 class DashboardComponent extends Component {
   constructor(props) {
@@ -28,18 +28,19 @@ class DashboardComponent extends Component {
   render() {
     const { item } = this.state;
     const itemList = item.map((data) => (
-      <div className="card" key={data.id}>
-        <Link to={`/skill/${data.id}`}>
+      <Link to={`/skill/${data.id}`}>
+        <div className="card" key={data.id}>
           <img src={data.image} alt="" />
-        </Link>
-        <div className="box">
-          <h2>title={data.title}
-            <Link to={`/skill/${data.id}`}>{data.title}</Link>
-          </h2>
-          <p>{data.content}</p>
-          <button>Add to cart</button>
+          <div className="box">
+            <h2>
+              title={data.title}
+              {data.title}
+            </h2>
+            <p>{data.content}</p>
+            <button>Add to cart</button>
+          </div>
         </div>
-      </div>
+      </Link>
     ));
     return (
       <div>
