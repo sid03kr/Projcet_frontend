@@ -1,0 +1,10 @@
+export { default as Home } from "../Components/Home";
+export { default as Login } from "../Components/LoginContainer";
+export { default as About } from "../Components/About";
+export { default as Board } from "../Components/Board";
+export { default as MyBoard } from "../Components/MyBoard";
+export { default as MyPage } from "../Components/MyPage";
+export { default as Details } from "../Components/Details";
+export { default as Cart } from "../Components/Cart";
+export { default as AddBoard } from "../Components/AddBoard";
+export { default as NotFound } from "../Components/NotFound";
