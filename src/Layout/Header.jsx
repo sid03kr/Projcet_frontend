@@ -19,16 +19,10 @@ class Header extends Component {
               <Link to="/login">로그인/회원가입</Link>
             </ShortCut>
           )}
-          <Logo>
-            <img
-              width="100%"
-              height="100%"
-              src="https://t1.daumcdn.net/cfile/tistory/99CD014B5BD01FA412"
-              alt="logo"
-            />
-          </Logo>
           <Search>
-            <h1>React Blog</h1>
+            <Link to="/">
+              <h4>React Shopping</h4>
+            </Link>
           </Search>
         </Element>
       </Container>
@@ -52,22 +46,13 @@ const Element = styled.div`
 `;
 
 const ShortCut = styled.div`
-  order: 1;
   width: 100%;
   height: 20px;
   text-align: right;
-  background-color: #a8ff78;
-`;
-
-const Logo = styled.div`
-  order: 2;
-  width: 200px;
-  height: 80px;
 `;
 
 const Search = styled.div`
-  order: 3;
   width: 880px;
-  background-color: #78ffd6;
+  font-size: 40px;
   text-align: center;
 `;

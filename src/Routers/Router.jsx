@@ -5,7 +5,6 @@ import {
   About,
   Login,
   Board,
-  MyBoard,
   MyPage,
   Details,
   Cart,
@@ -19,7 +18,6 @@ const Router = () => (
     <Route path="/about" component={About} />
     <Route path="/login" component={Login} />
     <Route path="/board" component={Board} />
-    <Route path="/myboard" component={MyBoard} />
     <Route path="/mypage" component={MyPage} />
     <Route path="/skill/:id" component={Details} />
     <Route path="/cart" component={Cart} />

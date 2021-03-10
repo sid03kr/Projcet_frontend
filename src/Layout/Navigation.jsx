@@ -36,14 +36,14 @@ class Navigation extends Component {
     return (
       <Nav>
         <NavList>
+          <NavLogo>
+            <Link to="/">Ildo's portfolio</Link>
+          </NavLogo>
           <NavItem>
-            <Link to="/about">소개</Link>
+            <Link to="/about">Introduce</Link>
           </NavItem>
           <NavItem>
-            <Link to="/board">게시판</Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/myboard">내 글보기</Link>
+            <Link to="/board">Board</Link>
           </NavItem>
           <NavItem>
             <Link to="/mypage">마이페이지</Link>
@@ -57,20 +57,32 @@ class Navigation extends Component {
 export default Navigation;
 
 const Nav = styled.div`
-  width: 100%;
-  height: 30px;
-  border-bottom: 1px solid #d1d8e4;
+  width: 300px;
+  height: 100vh;
+  float: left;
+  background-color: #ebebeb;
+  padding: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+`;
+
+const NavLogo = styled.h4`
+  color: #545454;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 30px;
 `;
 
 const NavList = styled.ul`
-  width: 1080px;
-  display: flex;
-  margin: 0 auto;
+  color: #5c5c5c;
+  font-size: 11px;
 `;
 
 const NavItem = styled.li`
-  width: 60px;
-  margin-left: 18px;
-  margin-top: 5px;
-  display: flex;
+  width: 100px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 14px;
 `;

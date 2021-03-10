@@ -1,5 +1,5 @@
 // import React from 'react';
-// import './css/core.css';
+
 // import './css/style.css';
 
 // // import {Container, Row, Col} from 'react-bootstrap'
@@ -39,6 +39,7 @@
 // export default App;
 
 import React, { Component } from 'react';
+import './Css/core.css';
 import styled from 'styled-components';
 import Header from './Layout/Header';
 import Navigation from './Layout/Navigation';
@@ -116,7 +117,6 @@ class App extends Component {
 
 const Layout = styled.div`
   margin: 0 auto;
-  display: flex;
   width: 100%;
   flex-flow: row wrap;
 `
