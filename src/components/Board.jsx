@@ -89,7 +89,7 @@ class ListBoard extends Component {
               </li>
               {boardList}
             </ul>
-            <Link to={"board/haribo"} className="btn_bk fl_r mt10">
+            <Link to={"board/add"} className="btn_bk fl_r mt10">
               추가
             </Link>
           </div>

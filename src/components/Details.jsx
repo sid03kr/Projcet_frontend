@@ -37,16 +37,7 @@ function Details() {
           <div className="fl_l ml10">
             <div className="name">{introduce.name}</div>
             <div className="type">{introduce.type}</div>
-            <div className="txt">
-              안녕하세요 신입 개발자 성일도입니다.
-              <br />
-              나이는 서른한살, 비전공자에 다른일을 해왔던사람이 개발자로 도전을
-              시작했습니다.
-              <br />
-              30살에는 좋아하는일을 하자라는 막연히 도전한 개발
-              <br />
-              지금하는 코딩이 너무 재미있고, 즐겁습니다.
-            </div>
+            <div className="txt">안녕하세요 신입 개발자 성일도입니다.</div>
           </div>
         </div>
 

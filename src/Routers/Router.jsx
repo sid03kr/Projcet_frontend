@@ -15,14 +15,14 @@ import {
 const Router = () => (
   <Switch>
     <Route exact path="/" component={Home} />
-    <Route path="/about" component={About} />
-    <Route path="/login" component={Login} />
-    <Route path="/board" component={Board} />
-    <Route path="/mypage" component={MyPage} />
-    <Route path="/skill/:id" component={Details} />
-    <Route path="/cart" component={Cart} />
-    <Route path="/edit/:id" component={AddBoard} />
-    <Route path="/board/haribo" component={AddBoard} />
+    <Route exact path="/about" component={About} />
+    <Route exact path="/login" component={Login} />
+    <Route exact path="/board" component={Board} />
+    <Route exact path="/mypage" component={MyPage} />
+    <Route exact path="/skill/:id" component={Details} />
+    <Route exact path="/cart" component={Cart} />
+    <Route exact path="/edit/:id" component={AddBoard} />
+    <Route exact path="/board/add" component={AddBoard} />
     <Route component={NotFound} />
   </Switch>
 );

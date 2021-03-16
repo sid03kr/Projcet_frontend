@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import styled from "styled-components";
-import withLogin from "./LoginHOC";
 
 class About extends Component {
   render() {

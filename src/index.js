@@ -9,7 +9,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 ReactDOM.render(
   <CartProvider>
     <Router>
-    <App />
+      <App />
     </Router>
   </CartProvider>,
   document.getElementById('root')

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 import axios from "axios";
 
 class Home extends Component {
@@ -29,27 +28,27 @@ class Home extends Component {
   render() {
     const { partner } = this.state;
     const partnerList = partner.map((data) => (
-      <HomeBest key={data.id}>
+      <li key={data.id}>
         <Link to={`/skill/${data.id}`}>
-          <HomeImg src={data.image} alt="" />
-          <h2>{data.name}</h2>
+          <img src={data.image} alt="" />
+          <h4>{data.name}</h4>
           <p>{data.title}</p>
           <p>{data.status}</p>
           <p>{data.call}</p>
         </Link>
-      </HomeBest>
+      </li>
     ));
     return (
       <div>
         <article>
-          <HomeSlide>
+          <div>
             <img src="https://ifh.cc/g/EyfEPk.jpg" alt="" />
-          </HomeSlide>
+          </div>
 
-          <HomeContent>
-            <HomeItem>Best item</HomeItem>
+          <div className="content">
+            <h4>Best item</h4>
             <ul className="best_item">{partnerList}</ul>
-          </HomeContent>
+          </div>
         </article>
       </div>
     );
@@ -57,27 +56,3 @@ class Home extends Component {
 }
 
 export default Home;
-
-const HomeSlide = styled.div``;
-
-const HomeContent = styled.div``;
-
-const HomeItem = styled.h4`
-  padding: 100px 0 80px;
-  text-align: center;
-  font-size: 17px;
-  color: #2e2e2e;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-weight: 700;
-`;
-
-const HomeBest = styled.li`
-  width: calc(25% - 10px);
-  margin: 5px 5px 50px;
-  float: left;
-`;
-
-const HomeImg = styled.img`
-  height: 400px;
-`;

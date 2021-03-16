@@ -31,7 +31,7 @@
 //           <Route path="/board/haribo" exact component={AddBoard}/>
 //           <Route component={NotFound}/>
 //       </Switch>    
-          
+
 //     </Router>
 //   );
 // }
@@ -40,6 +40,7 @@
 
 import React, { Component } from 'react';
 import './Css/core.css';
+import './Css/style.css';
 import styled from 'styled-components';
 import Header from './Layout/Header';
 import Navigation from './Layout/Navigation';
@@ -51,36 +52,36 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-        logged: false,
-        onLogin: this.onLogin,
-        onLogout: this.onLogout
+      logged: false,
+      onLogin: this.onLogin,
+      onLogout: this.onLogout
     }
   }
 
   // Login Func
   onLogin = () => {
     this.setState({
-        logged: true
+      logged: true
     });
   }
 
   // Logout Func
   onLogout = () => {
     this.setState({
-        logged: false
+      logged: false
     });
 
-    const provider = window.sessionStorage.getItem('provider');    
+    const provider = window.sessionStorage.getItem('provider');
     //Google AccessToken Remove
-    if(provider === 'google') {
+    if (provider === 'google') {
       const auth2 = window.gapi.auth2.getAuthInstance();
-      auth2.signOut().then(function() {
+      auth2.signOut().then(function () {
         console.log('Goolge Logout.');
       });
     }
     // Kakao AccessToken Remove
-    else if(provider === 'kakao'){
-      window.Kakao.Auth.logout(function() {
+    else if (provider === 'kakao') {
+      window.Kakao.Auth.logout(function () {
         console.log("Kakao logout");
       });
     }
@@ -90,7 +91,7 @@ class App extends Component {
 
   componentDidMount() {
     const id = window.sessionStorage.getItem('id');
-    if(id) {
+    if (id) {
       this.onLogin();
     }
     else {
@@ -104,7 +105,7 @@ class App extends Component {
     return (
       <Store.Provider value={this.state}>
         <Layout>
-          <Header logged={logged} onLogout={onLogout}/>
+          <Header logged={logged} onLogout={onLogout} />
           <Navigation />
           <Content>
             <Router />

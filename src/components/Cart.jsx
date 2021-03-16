@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { useCart } from "react-use-cart";
-
 import Modal from "react-modal";
 
 import Order from "./Order";
 
-export default function Cart() {
+function Cart() {
   const {
     isEmpty,
     totalUniqueItems,
@@ -87,3 +86,5 @@ export default function Cart() {
     </div>
   );
 }
+
+export default Cart;
